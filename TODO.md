@@ -3,7 +3,7 @@
 ## Tasks
 
 ### Development
-- [ ] Create git repository
+- [x] Create git repository
 - [ ] Resolve Unity Profiler issue of GUI access only
 
 ### After-Development
@@ -16,11 +16,10 @@
 ### Right before Delivery
 - [ ] Prepare solid documentation on how to use **Hyper Tuner**
 - [ ] Check the documentation if it still applies
-- [ ] Add licencing
 
 ## Experiments and Testing
 
-- [ ] Test if random.seed() works as intended. Seed functionality, was made for experiments reproducibility. See if created config files are the same for a multiple runs with the same random_seed in tuner_config.yaml
+- [ ] Test if random.seed() works as intended. Seed functionality, was made for experiments reproducibility. See if created config files are the same for a multiple runs with random_seed in tuner_config.yaml
 
 ## Current Classes
 
@@ -38,7 +37,7 @@
 
 ### training_manager.py
 
-- [ ] change dummy `cat` command to actual `train-agents`
+- [x] change dummy `cat` command to actual `train-agents`
 
 ## Classes to Implement
 
