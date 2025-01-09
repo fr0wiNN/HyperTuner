@@ -1,0 +1,60 @@
+algorithm_rules:
+  random_seed: 1
+  starting_steps: 10000
+  population_size: 100
+  heuristics: "default"
+  dropout_rate: 0.5
+  steps_increase: 2
+
+randomization_rules:
+  hyperparameters:
+    batch_size:
+      type: "doubling"
+      min: 1024
+      max: 8192
+
+    buffer_size:
+      type: "uniform"
+      min: 10240
+      max: 40960
+
+    learning_rate:
+      type: "log"
+      min: 0.0001
+      max: 0.01
+
+    beta:
+      type: "static"
+      value: 0.005
+
+    epsilon:
+      type: "default"
+
+    num_epoch:
+      type: "discrete"
+      choices: [2, 3, 4, 5]
+
+  network_settings:
+    normalize:
+      type: "static"
+      value: "true"
+
+    hidden_units:
+      type: "doubling"
+      min: 128
+      max: 1024
+
+    num_layers:
+      type: "discrete"
+      choices: [1, 2, 3, 4]
+
+  reward_signals:
+    extrinsic:
+      gamma:
+        type: "uniform"
+        min: 0.8
+        max: 0.995
+
+      strength:
+        type: "static"
+        value: 0.99
